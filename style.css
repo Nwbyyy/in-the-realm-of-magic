@@ -1,0 +1,62 @@
+.topnav {
+    background-color: #237573;
+    overflow: hidden;
+}
+
+.topnav h1 {
+    float: inline-start;
+    text-align: center;
+    padding-left: 25px;
+}
+
+.topnav a {
+    float: right;
+    color: #dff8f9;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav a:hover {
+    background-color: #3b46d9;
+    color: #dff8f9;
+}
+
+.topnav a.active {
+    background-color: #1c3f90;
+    color: #dff8f9;
+}
+
+.lab {
+    background-color: #1c3f90;
+    text-align: center;
+    width: 200px;
+    position: relative;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.sort {
+    background-color: #1c3f90;
+    text-align: center;
+    width: 200px;
+    position: relative;
+    margin-left: 40px;
+    
+}
+
+.circle {
+    background-color: #1c3f90;
+    text-align: center;
+    width: 180px;
+    margin-left: 40px;
+    padding: 10px;
+}
+
+
+
+body {
+    background-color: #041313;
+    color: #dff8f9;
+}

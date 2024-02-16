@@ -1,21 +1,28 @@
 .topnav {
     background-color: #237573;
     overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .topnav h1 {
     float: inline-start;
     text-align: center;
-    padding-left: 25px;
+    padding-left: 1%;
+    font-size: 190%;
 }
 
 .topnav a {
     float: right;
     color: #dff8f9;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1% 2%;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 150%;
+    margin: .5%;
+    margin-left: .1%;
 }
 
 .topnav a:hover {
@@ -31,27 +38,30 @@
 .lab {
     background-color: #1c3f90;
     text-align: center;
-    width: 200px;
-    position: relative;
-    margin-left: 40px;
-    margin-top: 40px;
+    width: 15%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    margin-top: 8%;
+    margin-left: 2%;
 }
 
 .sort {
     background-color: #1c3f90;
     text-align: center;
-    width: 200px;
-    position: relative;
-    margin-left: 40px;
+    width: 15%;
+    padding-top: .25%;
+    padding-bottom: .25%;
+    margin-left: 2%;
     
 }
 
 .circle {
     background-color: #1c3f90;
     text-align: center;
-    width: 180px;
-    margin-left: 40px;
-    padding: 10px;
+    width: 15%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 2%;
 }
 
 

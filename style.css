@@ -79,7 +79,7 @@
     margin-top: 15vh;
     display: grid;
     grid-template-rows: 10vh 6vh 10vh 10vh 10vh 10vh 10vh 10vh;
-    grid-template-columns: 30vw 18vw 18vw 18vw;
+    grid-template-columns: 40vw 18vw 18vw 18vw;
     grid-gap: 0;
     align-items: center;
 }

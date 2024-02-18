@@ -17,7 +17,7 @@
 .topnav a {
     float: right;
     color: #dff8f9;
-    border:#041313 dashed 2px;
+    border: #041313 dashed 2px;
     text-align: center;
     padding: 2vh 3vw;
     text-decoration: none;
@@ -34,7 +34,7 @@
 .topnav a.active {
     background-color: #1c3f90;
     color: #dff8f9;
-    border:#041313 solid 2px;
+    border: #041313 solid 2px;
 }
 
 .lab {
@@ -53,7 +53,7 @@
     width: 15vw;
     padding: .25vh 0;
     margin-left: 2vw;
-    
+
 }
 
 .circle {
@@ -72,7 +72,7 @@
     width: 15vw;
     padding: 2vh 0;
     margin-left: 2vw;
-    
+
 }
 
 .grid-container {
@@ -84,6 +84,28 @@
     align-items: center;
 }
 
+.spell-menu {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+    height: 75vh;
+}
+
+.opt {
+    font-size: 3vmin;
+    background-color: #1c3f90;
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    border: #3b46d9 solid;
+}
+
+.vertical-menu {
+    margin-left: 2vw;
+    width: 16vw;
+    height: 60vh;
+    overflow-y: auto;
+}
 
 
 body {

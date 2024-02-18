@@ -48,21 +48,28 @@
 
 .sort {
     font-size: 2vmin;
+    color: #dff8f9;
     background-color: #1c3f90;
     text-align: center;
     width: 15vw;
     padding: .25vh 0;
     margin-left: 2vw;
-
+    border: #3b46d9 solid;
 }
 
 .circle {
     font-size: 4vmin;
+    color: #dff8f9;
     background-color: #1c3f90;
+    border: #3b46d9 solid;
     text-align: center;
     width: 15vw;
     padding: 1vh 0;
     margin-left: 2vw;
+}
+
+.circle:hover {
+    background-color: #237573;
 }
 
 .spell {
@@ -89,6 +96,7 @@
     top: 15vh;
     left: 20vw;
     height: 75vh;
+    margin-top: 5vh;
 }
 
 .opt {
@@ -101,6 +109,7 @@
 }
 
 .vertical-menu {
+    margin-top: 2vh;
     margin-left: 2vw;
     width: 16vw;
     height: 60vh;

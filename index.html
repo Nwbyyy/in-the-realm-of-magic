@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>In the Realm of Magic</title>
+    
     <link rel="stylesheet" href="./style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
@@ -17,43 +18,46 @@
       <a href="stats.html">Statistics</a>
   </div> 
   <body>
+    <script src="scripts.js"></script>
     <main>
       <div class="grid-container">
         <div><h1 class="lab">Spells</h1></div>
         <div></div>
         <div></div>
         <div></div>
-        <div><p class="sort">Sort by: Circle</p></div>
+        <div><button class="sort">Sort by: Circle</button></div>
         <div><h1 class="lab" style="margin-bottom: 7vh;">Path 1</h3></div>
         <div><h1 class="lab" style="margin-bottom: 7vh;">Path 2</h3></div>
         <div><h1 class="lab" style="margin-bottom: 7vh;">Path 3</h3></div>
-        <div><h2 class="circle">Circle 1</h2></div>
+        <div><button onclick="showMenu('c1','c1-menu')" class="circle" id="c1">Circle 1</button></div>
         <div><h3 class="spell">Holder</h3></div>
         <div><h3 class="spell">Holder</h3></div>
         <div><h3 class="spell">Holder</h3></div>
-        <div><h2 class="circle">Circle 2</h2></div>
+        <div><button onclick="showMenu('c2','c2-menu')" class="circle" id="c2">Circle 2</button></div>
         <div><h3 class="spell">Holder</h3></div>
         <div><h3 class="spell">Holder</h3></div>
         <div><h3 class="spell">Holder</h3></div>
-        <div><h2 class="circle">Circle 3</h2></div>
+        <div><button onclick="showMenu('c3','c3-menu')" class="circle" id="c3">Circle 3</button></div>
         <div><h3 class="spell">Holder</h3></div>
         <div><h3 class="spell">Holder</h3></div>
         <div><h3 class="spell">Holder</h3></div>
-        <div><h2 class="circle">Circle 4</h2></div>
+        <div><button onclick="showMenu('c4','c4-menu')" class="circle" id="c4">Circle 4</button></div>
         <div><h3 class="spell">Holder</h3></div>
         <div><h3 class="spell">Holder</h3></div>
         <div><h3 class="spell">Holder</h3></div>
-        <div><h2 class="circle">Circle 5</h2></div>
+        <div><button onclick="showMenu('c5','c5-menu')" class="circle" id="c5">Circle 5</button></div>
         <div><h3 class="spell">Holder</h3></div>
         <div><h3 class="spell">Holder</h3></div>
         <div><h3 class="spell">Holder</h3></div>
-        <div><h2 class="circle">Circle 6</h2></div>
+        <div><button onclick="showMenu('c6','c6-menu')" class="circle" id="c6">Circle 6</button></div>
         <div></div>
         <div><h3 class="spell">Holder</h3></div>
         <div></div>
       </div>
-      <div hidden class="spell-menu">
-        <div><h2 class="circle">Circle 1</h2></div>
+
+      <div class="spell-menu">
+      <div hidden id="c1-menu">
+        <div><button onclick="hideMenu('1')" class="circle">Circle 1</button></div>
         <div class="vertical-menu">
           <p class="opt">Cure Disease</p>
           <p class="opt">Detect Magic</p>
@@ -76,8 +80,8 @@
           <p class="opt">Zombie Walk</p>
         </div>
       </div>
-      <div hidden class="spell-menu">
-        <div><h2 class="circle">Circle 2</h2></div>
+      <div hidden id="c2-menu">
+        <div><button onclick="hideMenu('2')" class="circle">Circle 2</button></div>
         <div class="vertical-menu">
           <p class="opt">Aura of Protection</p>
           <p class="opt">Death Watch</p>
@@ -94,8 +98,8 @@
           <p class="opt">Ward: Undead</p>
         </div>
       </div>
-      <div hidden class="spell-menu">
-        <div><h2 class="circle">Circle 3</h2></div>
+      <div hidden id="c3-menu">
+        <div><button onclick="hideMenu('3')" class="circle">Circle 3</button></div>
         <div class="vertical-menu">
           <p class="opt">Animate Lesser Undead</p>
           <p class="opt">Beckon Corpse</p>
@@ -113,8 +117,8 @@
           <p class="opt">Soul Bane</p>
         </div>
       </div>
-      <div hidden class="spell-menu">
-        <div><h2 class="circle">Circle 4</h2></div>
+      <div hidden id="c4-menu">
+        <div><button onclick="hideMenu('4')" class="circle">Circle 4</button></div>
         <div class="vertical-menu">
           <p class="opt">Animal Companion</p>
           <p class="opt">Animate Undead</p>
@@ -136,8 +140,8 @@
           <p class="opt">Transmute Self</p>
         </div>
       </div>
-      <div hidden class="spell-menu">
-        <div><h2 class="circle">Circle 5</h2></div>
+      <div hidden id="c5-menu">
+        <div><button onclick="hideMenu('5')" class="circle">Circle 5</button></div>
         <div class="vertical-menu" style="width: 15vw;">
           <p class="opt">Animate Undead General</p>
           <p class="opt">Armor-Piercing Weapon</p>
@@ -151,8 +155,8 @@
           <p class="opt">Ward: Enchanted Beings</p>
         </div>
       </div>
-      <div hidden class="spell-menu">
-        <div><h2 class="circle">Circle 6</h2></div>
+      <div hidden id="c6-menu">
+        <div><button onclick="hideMenu('6')" class="circle">Circle 6</button></div>
         <div class="vertical-menu">
           <p class="opt">Assassin’s Blade</p>
           <p class="opt">Cry of Life</p>
@@ -168,6 +172,7 @@
           <p class="opt">Transformation</p>
         </div>
       </div>
+    </div>
     </main>
   </body>
 </html>

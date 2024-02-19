@@ -1,3 +1,28 @@
+var spells = []
+
+for (let i = 0; i <= 15; i++) {
+    var list = document.getElementsByClassName("spell");
+    spells[i] = localStorage.getItem(i); 
+    if(localStorage.getItem(i) == "undefined") {
+        list[i].firstChild.nodeValue = "";
+    }
+    else {
+        list[i].firstChild.nodeValue = localStorage.getItem(i);
+    }
+    
+
+}
+
+function reset() {
+    for(list of document.getElementsByClassName("spell")) {
+        list.firstChild.nodeValue = "";
+    }
+    spells = [];
+    for (let i = 0; i <= 15; i++) {
+        localStorage.setItem(i, spells[i]);
+    }
+}
+
 function showMenu(me, name) {
     for (let i = 1; i <= 6; i++) {
         document.getElementById('c' + i + '-menu').setAttribute('hidden', 'hidden');
@@ -50,7 +75,30 @@ function dropHandler(ev) {
     // Get the id of the target and add the moved element to the target's DOM
     const data = ev.dataTransfer.getData("application/my-app");
     
-    if(document.getElementById(data).getAttribute('class')[3] <= ev.target.getAttribute('id')) {
-        ev.target.firstChild.nodeValue = document.getElementById(data).firstChild.nodeValue; 
+    if(document.getElementById(data).getAttribute('class')[3] <= ev.target.getAttribute('id')[0]) {
+        ev.target.firstChild.nodeValue = document.getElementById(data).firstChild.nodeValue;
+        if(ev.target.getAttribute('id')[0] == '1') {
+            spells[Number(ev.target.getAttribute('id')[1])-1] = document.getElementById(data).firstChild.nodeValue;
+        }
+        else if (ev.target.getAttribute('id')[0] == '2') {
+            spells[Number(ev.target.getAttribute('id')[0])+Number(ev.target.getAttribute('id')[1])] = document.getElementById(data).firstChild.nodeValue;
+        }
+        else if (ev.target.getAttribute('id')[0] == '3') {
+            spells[Number(ev.target.getAttribute('id')[0])*2+Number(ev.target.getAttribute('id')[1])-1] = document.getElementById(data).firstChild.nodeValue;
+        }
+        else if (ev.target.getAttribute('id')[0] == '4') {
+            spells[Number(ev.target.getAttribute('id')[0])*2+Number(ev.target.getAttribute('id')[1])] = document.getElementById(data).firstChild.nodeValue;
+        }
+        else if (ev.target.getAttribute('id')[0] == '5') {
+            spells[Number(ev.target.getAttribute('id')[0])*2+Number(ev.target.getAttribute('id')[1])+1] = document.getElementById(data).firstChild.nodeValue;
+        }
+        else if (ev.target.getAttribute('id')[0] == '6') {
+            spells[15] = document.getElementById(data).firstChild.nodeValue;
+        }
     }
+
+    for (let i = 0; i <= 15; i++) {
+        localStorage.setItem(i, spells[i]);
+    }
+
 }

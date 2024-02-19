@@ -8,10 +8,10 @@
   <title>In the Realm of Magic</title>
   <link rel="stylesheet" href="./style.css">
   <script src="scripts.js" defer></script>
-  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-  <link rel="manifest" href="/icons/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+  <link rel="manifest" href="./icons/site.webmanifest">
 </head>
 <div class="topnav">
   <h1>In the Realm of Magic</h1>
@@ -75,6 +75,7 @@
         <div><button onclick="hideMenu('1')" class="circle">&nbsp;&nbsp; &nbsp; &nbsp;Circle 1&nbsp;
             &nbsp;&#10005;</button></div>
         <div class="vertical-menu">
+          <p class="opt1" id="1al" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Alchemy</p>
           <p class="opt1" id="1cd" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Cure Disease</p>
           <p class="opt1" id="1dm" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Detect Magic</p>
           <p class="opt1" id="1dl" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Disrupt Light</p>
@@ -100,6 +101,7 @@
         <div><button onclick="hideMenu('2')" class="circle">&nbsp;&nbsp; &nbsp; &nbsp;Circle 2&nbsp;
             &nbsp;&#10005;</button></div>
         <div class="vertical-menu">
+          <p class="opt1" id="2al" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Alchemy</p>
           <p class="opt2" id="2aop" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Aura of Protection</p>
           <p class="opt2" id="2dw" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Death Watch</p>
           <p class="opt2" id="2dp" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Deep Pockets</p>
@@ -119,6 +121,7 @@
         <div><button onclick="hideMenu('3')" class="circle">&nbsp;&nbsp; &nbsp; &nbsp;Circle 3&nbsp;
             &nbsp;&#10005;</button></div>
         <div class="vertical-menu">
+          <p class="opt1" id="3al" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Alchemy</p>
           <p class="opt3" id="3alu" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Animate Lesser Undead</p>
           <p class="opt3" id="3bc" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Beckon Corpse</p>
           <p class="opt3" id="3can" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Cantrip</p>
@@ -139,6 +142,7 @@
         <div><button onclick="hideMenu('4')" class="circle">&nbsp;&nbsp; &nbsp; &nbsp;Circle 4&nbsp;
             &nbsp;&#10005;</button></div>
         <div class="vertical-menu">
+          <p class="opt1" id="4al" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Alchemy</p>
           <p class="opt4" id="4an" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Animal Companion</p>
           <p class="opt4" id="4au" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Animate Undead</p>
           <p class="opt4" id="4ac" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Armored Cloak</p>
@@ -163,6 +167,7 @@
         <div><button onclick="hideMenu('5')" class="circle">&nbsp;&nbsp; &nbsp; &nbsp;Circle 5&nbsp;
             &nbsp;&#10005;</button></div>
         <div class="vertical-menu" style="width: 15vw;">
+          <p class="opt1" id="5al" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Alchemy</p>
           <p class="opt5" id="5aug" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Animate Undead General</p>
           <p class="opt5" id="5apw" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Armor-Piercing Weapon</p>
           <p class="opt5" id="5coh" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Circle of Healing</p>
@@ -179,6 +184,7 @@
         <div><button onclick="hideMenu('6')" class="circle">&nbsp;&nbsp; &nbsp; &nbsp;Circle 6&nbsp;
             &nbsp;&#10005;</button></div>
         <div class="vertical-menu">
+          <p class="opt1" id="6al" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Alchemy</p>
           <p class="opt6" id="6asb" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Assassin’s Blade</p>
           <p class="opt6" id="6col" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Cry of Life</p>
           <p class="opt6" id="6ede" draggable="true" ondragstart="dragstartHandler(event)"  ondragend="dragendHandler(event)">Embrace Death</p>

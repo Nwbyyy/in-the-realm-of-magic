@@ -1,4 +1,40 @@
-var spells = []
+var spells = [];
+
+const abjurer = ["Disenchant","Ritual of Banishment","Resist Magic","Disrupt","Soul Bane","Enfeeble Being","Detect Magic", "Disrupt Light","Mentor","Pas", "Aura of Protection"];
+const alchemist = ["Strange Brew","Alchemy"];
+const assassin = ["Create Poison","Enchant Weapon","Deep Pockets","Death Watch","Assassin's Blade","Armor-Piercing Weapon","Feign Death","Disease Weapon","Ghost Blade"];
+const blacksmith = ["Repair Item","Masterwork Hammer","Reforge","Mystic Forge","Enchant Armor","Armored Cloak","Protect Item", "Repair Armor"];
+const channeler = ["Ward: Undead","Protect the Soul","Intervention","Ward: Enchanted Beings","Divine Aid","Call the Soul"];
+const healer = ["Combat Raise Dead","Heal Limb","Group Healing","Seed of Life","Cry of Life","Circle of Healing","Raise Dead","Purity to Poison","Purity to Disease","Cure Disease", "Immunity to Poison",];
+const necromancer = ["Embrace Death","Animate Undead General","Death Wish","Animate Undead","Commune with Spirit","Speak with Dead", "Zombie Walk", "Beckon Corpse"];
+const sorcerer = ["Protection from Missile","Lightning Bolt","Magic Missile","Implement", "Light", "Protection from Boulder","Fighter's Intuition"];
+const seer = ["Guidance","Dream","Prophecy","Vision","Séance","Foretell","Find the Path","Skew Divination","Precognition","Fortune Tell","Identify"];
+const shaman = ["Second Chance","Resist Death","Regeneration","Regenerate the Soul","Familiar","Transmute Self","Shapeshifting","Animal Companion","Speak", "Cantrip","Heartiness"];
+
+const options = [abjurer, alchemist, assassin, blacksmith, channeler, healer, necromancer, sorcerer, seer, shaman];
+const names = ["abjurer", "alchemist", "assassin", "blacksmith", "channeler", "healer", "necromancer", "sorcerer", "seer", "shaman"];
+
+
+const build = {
+    abjurer: 0,
+    alchemist: 0,
+    assassin: 0,
+    blacksmith: 0,
+    channeler: 0,
+    healer: 0,
+    necromancer: 0,
+    sorcerer: 0,
+    seer: 0,
+    shaman: 0
+};
+for(type of names) {
+    if(localStorage.getItem(type) == "undefined") {
+        build[type] = 0;
+    }
+    else {
+        build[type] = Number(localStorage.getItem(type));
+    }
+}
 
 for (let i = 0; i <= 15; i++) {
     var list = document.getElementsByClassName("spell");
@@ -13,6 +49,12 @@ for (let i = 0; i <= 15; i++) {
 
 }
 
+function resetData() {
+    for(type of names) {
+        build[type] = 0;
+    }
+}
+
 function reset() {
     for(list of document.getElementsByClassName("spell")) {
         list.firstChild.nodeValue = "";
@@ -21,6 +63,7 @@ function reset() {
     for (let i = 0; i <= 15; i++) {
         localStorage.setItem(i, spells[i]);
     }
+    resetData();
 }
 
 function showMenu(me, name) {
@@ -72,9 +115,9 @@ function dropHandler(ev) {
         list.setAttribute("style", "border: #3b46d9 solid;");
     }
     ev.preventDefault();
-    // Get the id of the target and add the moved element to the target's DOM
     const data = ev.dataTransfer.getData("application/my-app");
     
+
     if(document.getElementById(data).getAttribute('class')[3] <= ev.target.getAttribute('id')[0]) {
         ev.target.firstChild.nodeValue = document.getElementById(data).firstChild.nodeValue;
         if(ev.target.getAttribute('id')[0] == '1') {
@@ -97,8 +140,46 @@ function dropHandler(ev) {
         }
     }
 
+
+    resetData();
+    for(spell of spells) {
+        if(spell != "undefined") {
+            var circle = 0;
+
+            if(spells.indexOf(spell) < 3) {
+                circle = 1;
+            }
+            else if(spells.indexOf(spell) < 6) {
+                circle = 2;
+            }
+            else if(spells.indexOf(spell) < 9) {
+                circle = 3;
+            }
+            else if(spells.indexOf(spell) < 12) {
+                circle = 4;
+            }
+            else if(spells.indexOf(spell) < 15) {
+                circle = 5;
+            }
+            else if(spells.indexOf(spell) == 15) {
+                circle = 6;
+            }
+
+            for (let i = 0; i < 10; i++) {
+                if(options[i].includes(spell)) {
+                    build[names[i]] += circle;
+                    break;
+                }
+            }
+        }
+    }
+
+
     for (let i = 0; i <= 15; i++) {
         localStorage.setItem(i, spells[i]);
+    }
+    for(obj of names) {
+        localStorage.setItem(obj,build[obj])
     }
 
 }

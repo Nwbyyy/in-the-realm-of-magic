@@ -44,6 +44,7 @@
     width: 15vw;
     padding: .5vh 0;
     margin-left: 2vw;
+
 }
 
 .sort {
@@ -74,12 +75,12 @@
 
 .spell {
     font-size: 3vmin;
-    background-color: #1c3f90;
+    border: #3b46d9 solid;
     text-align: center;
     width: 15vw;
+    height: 4vh;
     padding: 2vh 0;
     margin-left: 2vw;
-
 }
 
 .grid-container {
@@ -99,7 +100,7 @@
     margin-top: 5vh;
 }
 
-.opt {
+.opt1,.opt2,.opt3,.opt4,.opt5,.opt6 {
     font-size: 3vmin;
     background-color: #1c3f90;
     text-align: center;

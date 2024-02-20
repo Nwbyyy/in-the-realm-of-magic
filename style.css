@@ -87,6 +87,9 @@
 .spell {
     font-size: 3vmin;
     border: #3b46d9 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     width: 15vw;
     height: 4vh;
@@ -112,7 +115,7 @@
 }
 
 .opt1,.opt2,.opt3,.opt4,.opt5,.opt6 {
-    font-size: 3vmin;
+    font-size: 2.75vmin;
     background-color: #1c3f90;
     text-align: center;
     margin-top: 1vh;
@@ -123,9 +126,21 @@
 .vertical-menu {
     margin-top: 2vh;
     margin-left: 2vw;
-    width: 15vw;
+    width: 17vw;
     height: 60vh;
     overflow-y: auto;
+}
+
+
+.ciropt {
+    font-size: 4vmin;
+    color: #dff8f9;
+    background-color: #1c3f90;
+    border: #3b46d9 solid;
+    text-align: center;
+    width: 17vw;
+    padding: 1vh 0;
+    margin-left: 2vw;
 }
 
 .chart {

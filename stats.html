@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>In the Realm of Magic</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="test.js" defer></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
@@ -14,11 +15,19 @@
   <div class="topnav">
     <h1>In the Realm of Magic</h1>
       <a href="index.html">Spells</a>
-      <a class="active href="stats.html">Statistics</a>
+      <a class="active" href="stats.html">Statistics</a>
   </div> 
-  <body>
+  <body onload="updateGraph(); setClass();">
     <main>
-      
+      <li>
+        <div class="lab" style="margin-top: 20vh; border: #3b46d9 solid;"><u>Your Class</u></div>
+        <div id="type" class="lab" style="border: #3b46d9 solid;" onclick="setClass(event)"></div>
+      </li>
+      <div class="chart">
+        <canvas id="pieChart"></canvas>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-autocolors"></script>
     </main>
   </body>
 </html>

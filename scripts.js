@@ -1,10 +1,11 @@
-var spells = [];
+
+var spells = ["","","","","","","","","","","","","","","","",];
 
 const abjurer = ["Disenchant","Ritual of Banishment","Resist Magic","Disrupt","Soul Bane","Enfeeble Being","Detect Magic", "Disrupt Light","Mentor","Pas", "Aura of Protection"];
 const alchemist = ["Strange Brew","Alchemy"];
 const assassin = ["Create Poison","Enchant Weapon","Deep Pockets","Death Watch","Assassin's Blade","Armor-Piercing Weapon","Feign Death","Disease Weapon","Ghost Blade"];
 const blacksmith = ["Repair Item","Masterwork Hammer","Reforge","Mystic Forge","Enchant Armor","Armored Cloak","Protect Item", "Repair Armor"];
-const channeler = ["Ward: Undead","Protect the Soul","Intervention","Ward: Enchanted Beings","Divine Aid","Call the Soul"];
+const channeler = ["Circle of Protection","Ward: Undead","Protect the Soul","Intervention","Ward: Enchanted Beings","Divine Aid","Call the Soul"];
 const healer = ["Combat Raise Dead","Heal Limb","Group Healing","Seed of Life","Cry of Life","Circle of Healing","Raise Dead","Purity to Poison","Purity to Disease","Cure Disease", "Immunity to Poison",];
 const necromancer = ["Embrace Death","Animate Undead General","Death Wish","Animate Undead","Commune with Spirit","Speak with Dead", "Zombie Walk", "Beckon Corpse"];
 const sorcerer = ["Protection from Missile","Lightning Bolt","Magic Missile","Implement", "Light", "Protection from Boulder","Fighter's Intuition"];
@@ -27,6 +28,7 @@ const build = {
     seer: 0,
     shaman: 0
 };
+
 for(type of names) {
     if(localStorage.getItem(type) == "undefined") {
         build[type] = 0;
@@ -45,8 +47,6 @@ for (let i = 0; i <= 15; i++) {
     else {
         list[i].firstChild.nodeValue = localStorage.getItem(i);
     }
-    
-
 }
 
 function resetData() {
@@ -60,8 +60,17 @@ function reset() {
         list.firstChild.nodeValue = "";
     }
     spells = [];
+    for(type of names) {
+        build[type] = 0;
+    }
     for (let i = 0; i <= 15; i++) {
         localStorage.setItem(i, spells[i]);
+    }
+    for (let i = 0; i <= 15; i++) {
+        localStorage.setItem(i, spells[i]);
+    }
+    for(obj of names) {
+        localStorage.setItem(obj,build[obj])
     }
     resetData();
 }
@@ -142,32 +151,32 @@ function dropHandler(ev) {
 
 
     resetData();
-    for(spell of spells) {
-        if(spell != "undefined") {
+    for(let i = 0; i <= spells.length; i++) {
+        if(spells[i] != "undefined") {
             var circle = 0;
 
-            if(spells.indexOf(spell) < 3) {
+            if(i < 3) {
                 circle = 1;
             }
-            else if(spells.indexOf(spell) < 6) {
+            else if(i < 6) {
                 circle = 2;
             }
-            else if(spells.indexOf(spell) < 9) {
+            else if(i < 9) {
                 circle = 3;
             }
-            else if(spells.indexOf(spell) < 12) {
+            else if(i < 12) {
                 circle = 4;
             }
-            else if(spells.indexOf(spell) < 15) {
+            else if(i < 15) {
                 circle = 5;
             }
-            else if(spells.indexOf(spell) == 15) {
+            else if(i == 15) {
                 circle = 6;
             }
-
-            for (let i = 0; i < 10; i++) {
-                if(options[i].includes(spell)) {
-                    build[names[i]] += circle;
+            
+            for (let j = 0; j < 10; j++) {
+                if(options[j].includes(spells[i])) {
+                    build[names[j]] += circle;
                     break;
                 }
             }
@@ -181,5 +190,6 @@ function dropHandler(ev) {
     for(obj of names) {
         localStorage.setItem(obj,build[obj])
     }
-
 }
+
+

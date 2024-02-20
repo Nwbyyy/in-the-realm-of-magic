@@ -128,6 +128,13 @@
     overflow-y: auto;
 }
 
+.chart {
+    width: 75vw;
+    height: 75vh;
+    position: absolute;
+    top: 20vh;
+    left: 100vh;
+}
 
 body {
     background-color: #041313;

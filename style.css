@@ -10,7 +10,7 @@
 .topnav h1 {
     float: inline-start;
     text-align: center;
-    padding-left: 1vw;
+    padding-left: 2vw;
     font-size: 5vmin;
 }
 
@@ -129,14 +129,25 @@
 }
 
 .chart {
-    width: 75vw;
+    width: 50vw;
     height: 75vh;
     position: absolute;
     top: 20vh;
     left: 100vh;
 }
 
+@font-face {
+    font-family: 'Immortal';
+    src: url('./font/IMMORTAL.ttf') format('truetype'); 
+}
+
+
 body {
     background-color: #041313;
     color: #dff8f9;
+    font-family: 'Immortal', sans-serif;
+}
+
+button {
+    font-family: 'Immortal', sans-serif;
 }

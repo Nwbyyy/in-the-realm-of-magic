@@ -4,11 +4,11 @@ var spells = ["","","","","","","","","","","","","","","","",];
 const abjurer = ["Disenchant","Ritual of Banishment","Resist Magic","Disrupt","Soul Bane","Enfeeble Being","Detect Magic", "Disrupt Light","Mentor","Pas", "Aura of Protection"];
 const alchemist = ["Strange Brew","Alchemy"];
 const assassin = ["Create Poison","Enchant Weapon","Deep Pockets","Death Watch","Assassin's Blade","Armor-Piercing Weapon","Feign Death","Disease Weapon","Ghost Blade"];
-const blacksmith = ["Repair Item","Masterwork Hammer","Reforge","Mystic Forge","Enchant Armor","Armored Cloak","Protect Item", "Repair Armor"];
+const blacksmith = ["Repair Item","Masterwork Hammer","Reforge","Mystic Forge","Enchant Armor","Protect Item", "Repair Armor"];
 const channeler = ["Circle of Protection","Ward: Undead","Protect the Soul","Intervention","Ward: Enchanted Beings","Divine Aid","Call the Soul"];
 const healer = ["Combat Raise Dead","Heal Limb","Group Healing","Seed of Life","Cry of Life","Circle of Healing","Raise Dead","Purity to Poison","Purity to Disease","Cure Disease", "Immunity to Poison",];
 const necromancer = ["Embrace Death","Animate Undead General","Death Wish","Animate Undead","Commune with Spirit","Speak with Dead", "Zombie Walk", "Beckon Corpse"];
-const sorcerer = ["Protection from Missile","Lightning Bolt","Magic Missile","Implement", "Light", "Protection from Boulder","Fighter's Intuition"];
+const sorcerer = ["Armored Cloak","Protection from Missile","Lightning Bolt","Magic Missile","Implement", "Light", "Protection from Boulder","Fighter's Intuition"];
 const seer = ["Guidance","Dream","Prophecy","Vision","Séance","Foretell","Find the Path","Skew Divination","Precognition","Fortune Tell","Identify"];
 const shaman = ["Second Chance","Resist Death","Regeneration","Regenerate the Soul","Familiar","Transmute Self","Shapeshifting","Animal Companion","Speak", "Cantrip","Heartiness"];
 

@@ -72,7 +72,19 @@ var chartChart = new Chart(ctx, {
         },
         title: {
             display: true,
-            text: 'Your Build Breakdown'
+            text: 'Your Build Breakdown',
+            font: {
+                family: "'Immortal', sans-serif",
+                size: "30 vmin"
+            }
+        },
+        legend: {
+            labels: {
+                font: {
+                    family: "'Immortal', sans-serif",
+                    size: "15 vmin"
+                }
+            }
         }
     }
   }
@@ -105,28 +117,40 @@ function updateGraph() {
     chartChart.destroy();
         
     chartChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: [names[0].charAt(0).toUpperCase() + names[0].slice(1),names[1].charAt(0).toUpperCase() + names[1].slice(1),names[2].charAt(0).toUpperCase() + names[2].slice(1),names[3].charAt(0).toUpperCase() + names[3].slice(1),names[4].charAt(0).toUpperCase() + names[4].slice(1),names[5].charAt(0).toUpperCase() + names[5].slice(1),names[6].charAt(0).toUpperCase() + names[6].slice(1),names[7].charAt(0).toUpperCase() + names[7].slice(1),names[8].charAt(0).toUpperCase() + names[8].slice(1),names[9].charAt(0).toUpperCase() + names[9].slice(1),],
-        datasets: [{
-        label: 'Circle Points',
-        data: [build[names[0]],build[names[1]],build[names[2]],build[names[3]],build[names[4]],build[names[5]],build[names[6]],build[names[7]],build[names[8]],build[names[9]],],
-        }]
-    },
-    plugins: [
-        autocolors
-    ],
-    options: {
-        plugins: {
-            autocolors: {
-                mode: 'data'
-            },
-            title: {
-                display: true,
-                text: 'Your Build Breakdown'
-            }
+        type: 'pie',
+        data: {
+          labels: [names[0].charAt(0).toUpperCase() + names[0].slice(1),names[1].charAt(0).toUpperCase() + names[1].slice(1),names[2].charAt(0).toUpperCase() + names[2].slice(1),names[3].charAt(0).toUpperCase() + names[3].slice(1),names[4].charAt(0).toUpperCase() + names[4].slice(1),names[5].charAt(0).toUpperCase() + names[5].slice(1),names[6].charAt(0).toUpperCase() + names[6].slice(1),names[7].charAt(0).toUpperCase() + names[7].slice(1),names[8].charAt(0).toUpperCase() + names[8].slice(1),names[9].charAt(0).toUpperCase() + names[9].slice(1),],
+          datasets: [{
+            label: 'Circle Points',
+            data: [build[names[0]],build[names[1]],build[names[2]],build[names[3]],build[names[4]],build[names[5]],build[names[6]],build[names[7]],build[names[8]],build[names[9]],],
+          }]
+        },
+        plugins: [
+          autocolors
+        ],
+        options: {
+          plugins: {
+              autocolors: {
+                  mode: 'data'
+              },
+              title: {
+                  display: true,
+                  text: 'Your Build Breakdown',
+                  font: {
+                    family: "'Immortal', sans-serif",
+                    size: "30 vmin"
+                    }
+              },
+              legend: {
+                  labels: {
+                      font: {
+                          family: "'Immortal', sans-serif",
+                          size: "15 vmin"
+                      }
+                  }
+              }
+          }
         }
-    }
-
-    });
+      
+      });
 }

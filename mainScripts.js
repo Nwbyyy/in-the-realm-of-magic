@@ -41,7 +41,7 @@ for(type of names) {
 for (let i = 0; i <= 15; i++) {
     var list = document.getElementsByClassName("spell");
     spells[i] = localStorage.getItem(i); 
-    if(localStorage.getItem(i) == "undefined") {
+    if(localStorage.getItem(i) == "undefined" || localStorage.getItem(i) == "null") {
         list[i].firstChild.nodeValue = "";
     }
     else {
